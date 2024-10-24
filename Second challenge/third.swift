@@ -82,11 +82,13 @@ struct Main2: View {
                         
                         // Plus icon button to add new journal entry
                         Button(action: {
-                            showAddEntry.toggle() // Show the add entry sheet
-                        }) {
-                            Image(systemName: "plus")
-                                .foregroundColor(.tx1)
-                                .font(.system(size: 24))
+                                                    isEditing = false
+                                                    selectedEntry = nil
+                                                    showAddEntry.toggle()
+                                                }) {
+                                                    Image(systemName: "plus")
+                                                        .foregroundColor(.tx1)
+                                                        .font(.system(size: 24))
                         }
                         .sheet(isPresented: $showAddEntry) {
                             AddJournalEntryView(journalEntries: $journalEntries, isEditing: $isEditing, selectedEntry: $selectedEntry)
