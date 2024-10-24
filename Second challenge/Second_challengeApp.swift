@@ -11,7 +11,7 @@ import SwiftUI
 struct Second_challengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Main2()
         }
     }
 }
